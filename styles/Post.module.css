@@ -1,0 +1,21 @@
+.the_article {
+	@apply relative flex flex-col p-4 w-5/6 mx-auto mt-24 bg-gray-100;
+}
+.the_article .back_btn {
+	@apply absolute flex gap-2 items-center top-0 left-0 -translate-y-[110%] bg-orange-400 text-gray-100 cursor-pointer p-4 rounded-md font-semibold;
+}
+.the_article .meta {
+	@apply flex flex-col gap-4 p-2;
+}
+.the_article .meta h1 {
+	@apply text-4xl font-black;
+}
+.the_article .meta .info {
+	@apply flex flex-row gap-2;
+}
+.the_article .meta .info span {
+	@apply flex gap-1 items-center bg-gray-300 text-gray-800 py-1 px-2 rounded-md text-center;
+}
+.the_article .body p {
+	@apply text-gray-900 font-mono leading-9 p-4;
+}

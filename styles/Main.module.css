@@ -1,0 +1,4 @@
+.content_wrapper {
+	@apply w-full lg:w-4/5 lg:absolute top-0 right-0 bg-left-top bg-fixed;
+	background-image: url('/bg.svg');
+}

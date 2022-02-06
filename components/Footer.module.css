@@ -1,0 +1,12 @@
+.footer {
+	@apply absolute bottom-0 left-0 p-4 -mb-32 lg:mb-0 flex flex-col w-full text-center justify-center items-center;
+}
+.footer_widgets {
+	@apply flex my-6 bg-gradient-to-r from-zinc-500 to-teal-500 rounded-md;
+}
+.social_media {
+	@apply flex flex-row gap-1 p-1 items-center justify-center shadow-lg;
+}
+.footer span {
+	@apply text-xs text-gray-500;
+}

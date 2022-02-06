@@ -1,0 +1,50 @@
+.github_card {
+	@apply font-mono flex flex-col p-8 rounded-md bg-white shadow;
+}
+.info {
+	@apply flex flex-col lg:flex-row p-2 gap-4;
+}
+.individual .mood {
+	@apply flex text-orange-600 pb-4;
+}
+.individual {
+	@apply flex flex-col lg:flex-row lg:w-3/4 gap-4 items-center lg:border-r-2 border-r-gray-300;
+}
+.individual span,
+.organizations a span {
+	overflow: visible !important;
+}
+.individual img {
+	@apply rounded-full shadow-lg;
+}
+.individual a {
+	@apply text-blue-500 text-2xl hover:underline flex items-baseline;
+}
+.individual p {
+	@apply text-sm text-gray-800 lg:w-4/5;
+}
+.organizations {
+	@apply flex flex-col gap-4;
+}
+.organizations div {
+	@apply flex flex-row justify-center;
+}
+.organizations div a {
+	@apply h-12 w-12;
+}
+.organizations div img {
+	@apply rounded-lg shadow-lg ring-gray-200 ring-1 hover:scale-105 duration-200;
+}
+.repos {
+	scrollbar-color: rgb(59 130 246 / 1) #ccc;
+	@apply pt-4 overflow-x-scroll xl:overflow-hidden;
+}
+.repos .contributions {
+	@apply flex flex-row gap-3 p-2;
+}
+.repos .contributions div {
+	@apply shadow-inner p-2 ring-2 ring-gray-100 rounded-md flex flex-wrap gap-2 w-auto lg:w-[240px] hover:scale-[102%] duration-200;
+}
+.repos .contributions div a {
+	@apply font-semibold items-center flex-1 w-max lg:flex gap-2 text-blue-900;
+}

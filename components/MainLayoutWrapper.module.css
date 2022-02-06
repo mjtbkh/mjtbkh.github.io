@@ -1,0 +1,7 @@
+.container {
+	@apply relative lg:px-12 py-0;
+}
+
+.main {
+	@apply min-h-screen flex-1 flex flex-col lg:flex-row justify-center items-center;
+}

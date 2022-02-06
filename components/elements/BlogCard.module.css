@@ -1,0 +1,12 @@
+.single_post {
+	@apply flex flex-col gap-4 bg-blue-100 backdrop-blur-3xl bg-opacity-95 rounded-md shadow-sm p-4;
+}
+.single_post h2 {
+	@apply text-xl text-gray-900 cursor-pointer hover:underline;
+}
+.single_post p {
+	@apply text-sm text-gray-700;
+}
+.single_post a {
+	@apply text-right;
+}

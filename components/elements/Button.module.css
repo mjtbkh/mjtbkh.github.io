@@ -1,0 +1,3 @@
+.button {
+	@apply flex gap-2 items-center p-4 rounded-md shadow-lg text-center text-white font-bold;
+}

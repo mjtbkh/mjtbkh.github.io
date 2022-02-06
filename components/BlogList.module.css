@@ -1,0 +1,9 @@
+.container {
+	@apply flex flex-col p-4;
+}
+.container h3 {
+	@apply flex gap-4 items-center my-4 p-4 w-max rounded-md shadow text-xl lg:text-3xl text-white bg-blue-800 text-center;
+}
+.container .blogs_wrapper {
+	@apply p-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-8;
+}
