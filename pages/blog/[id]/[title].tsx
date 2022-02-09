@@ -1,18 +1,14 @@
-import Sidebar from '../../../components/Sidebar'
-import { ApolloProvider } from '@apollo/client'
-import { useRouter } from 'next/router'
-import FetchPost, { PostApolloClient } from '../../../hooks/FetchPost'
-import styles from '../../../styles/Main.module.css'
-import { NextPage } from 'next'
-import MainLayoutWrapper from '../../../components/MainLayoutWrapper'
-
-interface RouterParams {
-	params: [id: number, title: string]
-}
+import Sidebar from '../../../components/Sidebar';
+import { ApolloProvider } from '@apollo/client';
+import { useRouter } from 'next/router';
+import FetchPost, { PostApolloClient } from '../../../hooks/FetchPost';
+import styles from '../../../styles/Main.module.css';
+import { NextPage } from 'next';
+import MainLayoutWrapper from '../../../components/MainLayoutWrapper';
 
 const SinglePost = () => {
-	const router = useRouter()
-	const { id, title }: any = router.query
+	const router = useRouter();
+	const { id }: any = router.query;
 
 	return (
 		<>
@@ -23,11 +19,11 @@ const SinglePost = () => {
 				</ApolloProvider>
 			</section>
 		</>
-	)
-}
+	);
+};
 
 SinglePost.getLayout = function getLayout(page: NextPage) {
-	return <MainLayoutWrapper>{page}</MainLayoutWrapper>
-}
+	return <MainLayoutWrapper>{page}</MainLayoutWrapper>;
+};
 
-export default SinglePost
+export default SinglePost;

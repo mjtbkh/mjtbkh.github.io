@@ -1,13 +1,14 @@
+import Link from 'next/link';
 import {
 	HomeIcon,
 	PencilIcon,
 	ViewGridIcon,
 	IdentificationIcon,
-	PhoneIcon
-} from '@heroicons/react/outline'
-import Image from 'next/image'
-import Footer from './Footer'
-import styles from './Sidebar.module.css'
+	PhoneIcon,
+} from '@heroicons/react/outline';
+import Image from 'next/image';
+import Footer from './Footer';
+import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
 	return (
@@ -27,31 +28,48 @@ const Sidebar = () => {
 			</div>
 			<ul className={styles.menu}>
 				<li>
-					<HomeIcon className={`${styles.sidebar_icons} text-blue-500`} /> Home
+					<Link href={`/`} passHref>
+						<a>
+							<HomeIcon className={`${styles.sidebar_icons} text-blue-500`} />{' '}
+							Home
+						</a>
+					</Link>
 				</li>
 				<li>
-					<PencilIcon className={`${styles.sidebar_icons} text-indigo-500`} />{' '}
-					Blog
+					<Link href={`/blog/`} passHref>
+						<a>
+							<PencilIcon
+								className={`${styles.sidebar_icons} text-indigo-500`}
+							/>{' '}
+							Blog
+						</a>
+					</Link>
 				</li>
 				<li>
-					<ViewGridIcon className={`${styles.sidebar_icons} text-violet-500`} />
-					Portfolio
+					<Link href={`/`} passHref>
+						<a>
+							<ViewGridIcon
+								className={`${styles.sidebar_icons} text-violet-500`}
+							/>
+							Portfolio
+						</a>
+					</Link>
 				</li>
 				<li>
-					<IdentificationIcon
-						className={`${styles.sidebar_icons} text-purple-500`}
-					/>
-					About
-				</li>
-				<li>
-					<PhoneIcon className={`${styles.sidebar_icons} text-fuchsia-500`} />
-					Contact
+					<Link href={`/`} passHref>
+						<a>
+							<PhoneIcon
+								className={`${styles.sidebar_icons} text-fuchsia-500`}
+							/>
+							Contact
+						</a>
+					</Link>
 				</li>
 			</ul>
 
 			<Footer />
 		</aside>
-	)
-}
+	);
+};
 
-export default Sidebar
+export default Sidebar;

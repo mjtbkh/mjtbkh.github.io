@@ -1,9 +1,9 @@
-import styles from './BlogSection.module.css'
-import { NewspaperIcon } from '@heroicons/react/outline'
+import styles from './BlogSection.module.css';
+import { NewspaperIcon } from '@heroicons/react/outline';
 import FetchHomepagePosts, {
-	PostsApolloClient
-} from '../hooks/FetchHomepagePosts'
-import { ApolloProvider } from '@apollo/client'
+	PostsApolloClient,
+} from '../hooks/FetchHomepagePosts';
+import { ApolloProvider } from '@apollo/client';
 
 const BlogSection = () => {
 	return (
@@ -17,7 +17,7 @@ const BlogSection = () => {
 				</ApolloProvider>
 			</section>
 		</section>
-	)
-}
+	);
+};
 
-export default BlogSection
+export default BlogSection;

@@ -2,9 +2,9 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['avatars.githubusercontent.com'],
-		minimumCacheTTL: 2592000
-	}
-}
+		domains: ['avatars.githubusercontent.com', 'localhost'],
+		minimumCacheTTL: 2592000,
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

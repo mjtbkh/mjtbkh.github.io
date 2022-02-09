@@ -1,14 +1,14 @@
 .github_card {
-	@apply font-mono flex flex-col p-8 rounded-md bg-white shadow;
+	@apply flex flex-col rounded-md bg-white p-8 font-mono shadow;
 }
 .info {
-	@apply flex flex-col lg:flex-row p-2 gap-4;
+	@apply flex flex-col gap-4 p-2 lg:flex-row;
 }
 .individual .mood {
-	@apply flex text-orange-600 pb-4;
+	@apply flex pb-4 text-orange-600;
 }
 .individual {
-	@apply flex flex-col lg:flex-row lg:w-3/4 gap-4 items-center lg:border-r-2 border-r-gray-300;
+	@apply flex flex-col items-center gap-4 border-r-gray-300 lg:w-3/4 lg:flex-row lg:border-r-2;
 }
 .individual span,
 .organizations a span {
@@ -18,7 +18,7 @@
 	@apply rounded-full shadow-lg;
 }
 .individual a {
-	@apply text-blue-500 text-2xl hover:underline flex items-baseline;
+	@apply flex items-baseline text-2xl text-blue-500 hover:underline;
 }
 .individual p {
 	@apply text-sm text-gray-800 lg:w-4/5;
@@ -33,18 +33,18 @@
 	@apply h-12 w-12;
 }
 .organizations div img {
-	@apply rounded-lg shadow-lg ring-gray-200 ring-1 hover:scale-105 duration-200;
+	@apply rounded-lg shadow-lg ring-1 ring-gray-200 duration-200 hover:scale-105;
 }
 .repos {
 	scrollbar-color: rgb(59 130 246 / 1) #ccc;
-	@apply pt-4 overflow-x-scroll xl:overflow-hidden;
+	@apply overflow-x-scroll pt-4 xl:overflow-hidden;
 }
 .repos .contributions {
 	@apply flex flex-row gap-3 p-2;
 }
 .repos .contributions div {
-	@apply shadow-inner p-2 ring-2 ring-gray-100 rounded-md flex flex-wrap gap-2 w-auto lg:w-[240px] hover:scale-[102%] duration-200;
+	@apply flex w-auto flex-wrap gap-2 rounded-md p-2 shadow-inner ring-2 ring-gray-100 duration-200 hover:scale-[102%] lg:w-[240px];
 }
 .repos .contributions div a {
-	@apply font-semibold items-center flex-1 w-max lg:flex gap-2 text-blue-900;
+	@apply w-max flex-1 items-center gap-2 font-semibold text-blue-900 lg:flex;
 }

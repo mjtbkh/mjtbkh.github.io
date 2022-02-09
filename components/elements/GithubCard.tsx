@@ -1,52 +1,52 @@
-import Image from 'next/image'
-import styles from './GithubCard.module.css'
+import Image from 'next/image';
+import styles from './GithubCard.module.css';
 import {
 	CollectionIcon,
 	ExternalLinkIcon,
-	FireIcon
-} from '@heroicons/react/outline'
+	FireIcon,
+} from '@heroicons/react/outline';
 
 interface GithubCardProps {
 	user: {
-		login: string
-		name: string
-		url: string
-		avatarUrl: string
+		login: string;
+		name: string;
+		url: string;
+		avatarUrl: string;
 		status: {
-			message: string
-		}
-		bio: string
+			message: string;
+		};
+		bio: string;
 		repositoriesContributedTo: {
 			edges: [
 				node: {
-					id: string
-					name: string
-					url: string
-					description: string
-				}
-			]
-		}
+					id: string;
+					name: string;
+					url: string;
+					description: string;
+				},
+			];
+		};
 		repositories: {
 			edges: [
 				node: {
-					id: string
-					name: string
-					url: string
-					description: string
-				}
-			]
-		}
+					id: string;
+					name: string;
+					url: string;
+					description: string;
+				},
+			];
+		};
 		organizations: {
 			edges: [
 				node: {
-					id: string
-					name: string
-					url: string
-					avatarUrl: string
-				}
-			]
-		}
-	}
+					id: string;
+					name: string;
+					url: string;
+					avatarUrl: string;
+				},
+			];
+		};
+	};
 }
 
 const shimmer = (w: number, h: number): string => `
@@ -61,12 +61,12 @@ const shimmer = (w: number, h: number): string => `
   <rect style="border-radius: 50%" width="${w}" height="${h}" fill="#777" />
   <rect style="border-radius: 50%; overflow: hidden;" id="r" width="${w}" height="${h}" fill="url(#g)" />
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
-</svg>`
+</svg>`;
 
 const toBase64 = (el: string) =>
 	typeof window === 'undefined'
 		? Buffer.from(el).toString('base64')
-		: window.btoa(el)
+		: window.btoa(el);
 
 const GithubCard = (props: GithubCardProps) => {
 	return (
@@ -81,7 +81,7 @@ const GithubCard = (props: GithubCardProps) => {
 						title={props.user.name}
 						placeholder='blur'
 						blurDataURL={`data:image/svg+xml;base64,${toBase64(
-							shimmer(80, 80)
+							shimmer(80, 80),
 						)}`}
 					/>
 					<div>
@@ -99,7 +99,7 @@ const GithubCard = (props: GithubCardProps) => {
 				<section className={styles.organizations}>
 					<p>My Github organizations</p>
 					<div>
-						{props.user.organizations.edges.map((org) => (
+						{props.user.organizations.edges.map(org => (
 							<a
 								href={org.node?.url}
 								key={org.node?.id}
@@ -113,7 +113,7 @@ const GithubCard = (props: GithubCardProps) => {
 									alt={org.node?.name}
 									placeholder='blur'
 									blurDataURL={`data:image/svg+xml;base64,${toBase64(
-										shimmer(30, 30)
+										shimmer(30, 30),
 									)}`}
 								/>
 							</a>
@@ -124,7 +124,7 @@ const GithubCard = (props: GithubCardProps) => {
 			<section className={styles.repos}>
 				<p>My Github contributions</p>
 				<div className={styles.contributions}>
-					{props.user.repositoriesContributedTo.edges.map((repo) => (
+					{props.user.repositoriesContributedTo.edges.map(repo => (
 						<div key={repo.node?.id}>
 							<a
 								href={repo.node?.url}
@@ -143,7 +143,7 @@ const GithubCard = (props: GithubCardProps) => {
 			<section className={styles.repos}>
 				<p>My Github repositories</p>
 				<div className={styles.contributions}>
-					{props.user.repositories.edges.map((repo) => (
+					{props.user.repositories.edges.map(repo => (
 						<div key={repo.node?.id}>
 							<a
 								href={repo.node?.url}
@@ -160,7 +160,7 @@ const GithubCard = (props: GithubCardProps) => {
 				</div>
 			</section>
 		</section>
-	)
-}
+	);
+};
 
-export default GithubCard
+export default GithubCard;

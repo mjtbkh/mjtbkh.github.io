@@ -1,21 +1,54 @@
 .the_article {
-	@apply relative flex flex-col p-4 w-5/6 mx-auto mt-24 bg-gray-100;
+	@apply relative mx-auto mt-24 flex w-5/6 flex-col bg-gray-100 p-4;
 }
 .the_article .back_btn {
-	@apply absolute flex gap-2 items-center top-0 left-0 -translate-y-[110%] bg-orange-400 text-gray-100 cursor-pointer p-4 rounded-md font-semibold;
+	@apply absolute top-0 left-0 flex -translate-y-[110%] cursor-pointer items-center gap-2 rounded-md bg-orange-400 p-4 font-semibold text-gray-100;
+}
+.the_article .spinner {
+	@apply mx-auto flex h-max w-max animate-spin justify-center;
 }
 .the_article .meta {
-	@apply flex flex-col gap-4 p-2;
+	@apply flex flex-col gap-4 p-2 lg:flex-row;
+}
+.the_article .meta .thumbnail {
+	@apply mx-auto lg:mx-0;
 }
 .the_article .meta h1 {
-	@apply text-4xl font-black;
+	@apply mb-4 text-4xl font-black;
 }
 .the_article .meta .info {
-	@apply flex flex-row gap-2;
+	@apply flex flex-col gap-2;
 }
-.the_article .meta .info span {
-	@apply flex gap-1 items-center bg-gray-300 text-gray-800 py-1 px-2 rounded-md text-center;
+.the_article .meta .info .dates {
+	@apply flex flex-col gap-1 text-xs lg:flex-row;
+}
+.the_article .meta .info .dates span {
+	@apply flex items-center gap-1 rounded-md bg-gray-300 py-1 px-2 text-center text-gray-800;
 }
 .the_article .body p {
-	@apply text-gray-900 font-mono leading-9 p-4;
+	@apply p-4 font-mono leading-9 text-gray-900;
+}
+.the_article .social {
+	@apply flex flex-row gap-1;
+}
+.the_article .social button {
+	@apply h-6 w-6 rounded-md fill-white p-1 shadow-md;
+}
+.the_article .social .twitter {
+	@apply bg-blue-400;
+}
+.the_article .social .facebook {
+	@apply bg-blue-600;
+}
+.the_article .social .reddit {
+	@apply bg-orange-500;
+}
+.the_article .social .whatsapp {
+	@apply bg-green-500;
+}
+.the_article .social .telegram {
+	@apply bg-blue-400;
+}
+.the_article .social .mail {
+	@apply bg-slate-700;
 }

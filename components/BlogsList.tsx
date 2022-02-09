@@ -1,8 +1,8 @@
-import styles from './BlogList.module.css'
-import FetchAllPosts, { PostsApolloClient } from '../hooks/FetchAllPosts'
-import { ApolloProvider } from '@apollo/client'
+import styles from './BlogList.module.css';
+import FetchAllPosts, { PostsApolloClient } from '../hooks/FetchAllPosts';
+import { ApolloProvider } from '@apollo/client';
 
-import { NewspaperIcon } from '@heroicons/react/outline'
+import { NewspaperIcon } from '@heroicons/react/outline';
 
 const BlogsList = () => {
 	return (
@@ -16,7 +16,7 @@ const BlogsList = () => {
 				</div>
 			</ApolloProvider>
 		</section>
-	)
-}
+	);
+};
 
-export default BlogsList
+export default BlogsList;

@@ -1,6 +1,6 @@
-import React, { useState, Fragment } from 'react'
-import BlogCard from '../components/elements/BlogCard'
-import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client'
+import React, { useState, Fragment } from 'react';
+import BlogCard from '../components/elements/BlogCard';
+import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client';
 
 const PostsQuery = gql`
 	query Articles {
@@ -17,29 +17,29 @@ const PostsQuery = gql`
 			}
 		}
 	}
-`
+`;
 
 export const PostsApolloClient = new ApolloClient({
 	uri: 'http://localhost:1337/graphql',
 	cache: new InMemoryCache(),
 	headers: {
-		Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_GRAPHQL_BEARER_TOKEN}`
-	}
-})
+		Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_GRAPHQL_BEARER_TOKEN}`,
+	},
+});
 
 interface Post {
-	id: number
+	id: number;
 	attributes: {
-		title: string
-		body: string
-		publishedAt: string
-		isMediumPost: boolean
-		mediumLink: string
-	}
+		title: string;
+		body: string;
+		publishedAt: string;
+		isMediumPost: boolean;
+		mediumLink: string;
+	};
 }
 
 const FetchHomepagePosts = () => {
-	const { loading, error, data } = useQuery(PostsQuery)
+	const { loading, error, data } = useQuery(PostsQuery);
 	const [IPost, _] = useState<Post>({
 		id: 0,
 		attributes: {
@@ -47,9 +47,9 @@ const FetchHomepagePosts = () => {
 			body: '',
 			publishedAt: '',
 			isMediumPost: false,
-			mediumLink: 'https://medium.com/@mjtbkh/'
-		}
-	})
+			mediumLink: 'https://medium.com/@mjtbkh/',
+		},
+	});
 
 	if (loading)
 		return (
@@ -62,21 +62,21 @@ const FetchHomepagePosts = () => {
 				isMediumPost={IPost.attributes.isMediumPost}
 				mediumLink={IPost.attributes.mediumLink}
 			/>
-		)
+		);
 
 	if (error)
 		return (
 			<Fragment>
 				<h4>There was an error while loading posts =(</h4>
 			</Fragment>
-		)
+		);
 
 	if (data.articles.data.length === 0)
 		return (
 			<Fragment>
 				<h4>There are currently no posts to show...</h4>
 			</Fragment>
-		)
+		);
 
 	if (data)
 		return data.articles.data.map((post: Post) => (
@@ -89,9 +89,9 @@ const FetchHomepagePosts = () => {
 				isMediumPost={post.attributes.isMediumPost}
 				mediumLink={post.attributes.mediumLink}
 			/>
-		))
+		));
 
-	return <Fragment></Fragment>
-}
+	return <Fragment></Fragment>;
+};
 
-export default FetchHomepagePosts
+export default FetchHomepagePosts;

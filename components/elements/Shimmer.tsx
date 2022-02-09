@@ -1,4 +1,4 @@
-import styles from './Shimmer.module.css'
+import styles from './Shimmer.module.css';
 
 const Shimmer = () => {
 	return (
@@ -12,7 +12,7 @@ const Shimmer = () => {
 			</div>
 			<div className={styles.button}></div>
 		</div>
-	)
-}
+	);
+};
 
-export default Shimmer
+export default Shimmer;

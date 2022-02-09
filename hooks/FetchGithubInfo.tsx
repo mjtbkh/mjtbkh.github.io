@@ -1,7 +1,7 @@
-import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client'
-import { Fragment, useState } from 'react'
-import GithubCard from '../components/elements/GithubCard'
-import Shimmer from '../components/elements/Shimmer'
+import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client';
+import { Fragment, useState } from 'react';
+import GithubCard from '../components/elements/GithubCard';
+import Shimmer from '../components/elements/Shimmer';
 
 const GithubQuery = gql`
 	query User($login: String!) {
@@ -51,38 +51,38 @@ const GithubQuery = gql`
 			}
 		}
 	}
-`
+`;
 
 export const GithubApolloClient = new ApolloClient({
 	uri: 'https://api.github.com/graphql',
 	cache: new InMemoryCache(),
 	headers: {
-		Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_GRAPHQL_BEARER_TOKEN}`
-	}
-})
+		Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_GRAPHQL_BEARER_TOKEN}`,
+	},
+});
 
 interface FetchGithubInfoProps {
-	login: string
+	login: string;
 }
 
 const FetchGithubInfo = ({ login }: FetchGithubInfoProps) => {
 	const { loading, error, data } = useQuery(GithubQuery, {
-		variables: { login }
-	})
+		variables: { login },
+	});
 
 	if (error)
 		return (
 			<Fragment>
 				<h4>There was an error while loading data from Github.com =(</h4>
 			</Fragment>
-		)
+		);
 
-	if (loading) return <Shimmer />
+	if (loading) return <Shimmer />;
 
 	if (data && data.user.login)
-		return <GithubCard key={data.user.login} user={data.user} />
+		return <GithubCard key={data.user.login} user={data.user} />;
 
-	return <Fragment></Fragment>
-}
+	return <Fragment></Fragment>;
+};
 
-export default FetchGithubInfo
+export default FetchGithubInfo;

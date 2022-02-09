@@ -1,5 +1,5 @@
-import styles from './MainLayoutWrapper.module.css'
-import Head from 'next/head'
+import styles from './MainLayoutWrapper.module.css';
+import Head from 'next/head';
 
 const MainLayoutWrapper = ({ children }: any) => {
 	return (
@@ -15,7 +15,7 @@ const MainLayoutWrapper = ({ children }: any) => {
 
 			<main className={styles.main}>{children}</main>
 		</div>
-	)
-}
+	);
+};
 
-export default MainLayoutWrapper
+export default MainLayoutWrapper;

@@ -1,7 +1,7 @@
-import styles from './ProjectsSection.module.css'
-import { BeakerIcon } from '@heroicons/react/outline'
-import FetchGithubInfo, { GithubApolloClient } from '../hooks/FetchGithubInfo'
-import { ApolloProvider } from '@apollo/client'
+import styles from './ProjectsSection.module.css';
+import { BeakerIcon } from '@heroicons/react/outline';
+import FetchGithubInfo, { GithubApolloClient } from '../hooks/FetchGithubInfo';
+import { ApolloProvider } from '@apollo/client';
 
 const ProjectsSection = () => {
 	return (
@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 				<FetchGithubInfo login={'mjtbkh'} />
 			</ApolloProvider>
 		</section>
-	)
-}
+	);
+};
 
-export default ProjectsSection
+export default ProjectsSection;

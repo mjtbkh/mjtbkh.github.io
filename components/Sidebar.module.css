@@ -1,24 +1,30 @@
 .sidebar {
-	@apply lg:fixed left-0 h-full w-full lg:w-1/5 px-2 py-24 lg:py-6 bg-white border-b-2 border-b-emerald-500 lg:border-b-0 lg:border-r-2 lg:border-emerald-500 shadow-lg lg:shadow-none;
+	@apply left-0 h-full w-full border-b-2 border-b-emerald-500 bg-white px-2 py-24 shadow-lg lg:fixed lg:w-1/5 lg:border-b-0 lg:border-r-2 lg:border-emerald-500 lg:py-6 lg:shadow-none;
+}
+.sidebar span {
+	@apply overflow-visible;
 }
 .title {
-	@apply text-sm lg:text-xl text-gray-900 font-semibold;
+	@apply text-sm font-semibold text-gray-900 lg:text-xl;
 }
 .description {
-	@apply text-xs text-gray-800 font-thin lg:font-light;
+	@apply text-xs font-thin text-gray-800 lg:font-light;
 }
 .info {
 	@apply text-center;
 }
 .image {
-	@apply rounded-full mx-auto shadow-lg;
+	@apply mx-auto rounded-full shadow-lg;
 }
 .menu {
-	@apply mt-6 flex flex-row flex-wrap lg:flex-col gap-4 lg:gap-1 justify-center;
+	@apply mt-6 flex flex-row flex-wrap justify-center gap-4 lg:flex-col lg:gap-1;
 }
 .menu li {
-	@apply border-2 border-gray-200 lg:border-0 flex gap-2 p-2 w-max lg:w-4/5 lg:mx-auto items-center rounded-md hover:bg-indigo-600 hover:shadow-lg hover:text-white duration-300 cursor-pointer;
+	@apply w-max cursor-pointer rounded-md border-2 border-gray-200 p-2 duration-300 hover:bg-indigo-600 hover:text-white hover:shadow-lg lg:mx-auto lg:w-4/5 lg:border-0;
+}
+.sidebar .menu a {
+	@apply flex items-center gap-2;
 }
 .sidebar_icons {
-	@apply w-6 h-6;
+	@apply h-6 w-6;
 }

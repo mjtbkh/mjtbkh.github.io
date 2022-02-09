@@ -1,6 +1,6 @@
-import styles from './SkillsSection.module.css'
-import SkillChart from './SkillChart'
-import { FingerPrintIcon } from '@heroicons/react/outline'
+import styles from './SkillsSection.module.css';
+import SkillChart from './SkillChart';
+import { FingerPrintIcon } from '@heroicons/react/outline';
 
 const SkillsSection = () => {
 	return (
@@ -22,7 +22,7 @@ const SkillsSection = () => {
 				<SkillChart />
 			</section>
 		</section>
-	)
-}
+	);
+};
 
-export default SkillsSection
+export default SkillsSection;
