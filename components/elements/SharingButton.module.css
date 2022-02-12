@@ -1,0 +1,24 @@
+.share_btn {
+	@apply h-6 w-6 rounded-md fill-white p-1 shadow-md;
+}
+.twitter {
+	@apply bg-blue-400;
+}
+.facebook {
+	@apply bg-blue-600;
+}
+.reddit {
+	@apply bg-orange-500;
+}
+.whatsapp {
+	@apply bg-green-500;
+}
+.hackernews {
+	@apply bg-orange-600;
+}
+.telegram {
+	@apply bg-blue-400;
+}
+.mail {
+	@apply bg-slate-700;
+}

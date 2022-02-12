@@ -31,24 +31,3 @@
 .the_article .social {
 	@apply flex flex-row gap-1;
 }
-.the_article .social button {
-	@apply h-6 w-6 rounded-md fill-white p-1 shadow-md;
-}
-.the_article .social .twitter {
-	@apply bg-blue-400;
-}
-.the_article .social .facebook {
-	@apply bg-blue-600;
-}
-.the_article .social .reddit {
-	@apply bg-orange-500;
-}
-.the_article .social .whatsapp {
-	@apply bg-green-500;
-}
-.the_article .social .telegram {
-	@apply bg-blue-400;
-}
-.the_article .social .mail {
-	@apply bg-slate-700;
-}
