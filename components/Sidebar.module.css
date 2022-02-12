@@ -2,7 +2,7 @@
 	@apply left-0 h-full w-full border-b-2 border-b-emerald-500 bg-white px-2 py-24 shadow-lg lg:fixed lg:w-1/5 lg:border-b-0 lg:border-r-2 lg:border-emerald-500 lg:py-6 lg:shadow-none;
 }
 .sidebar span {
-	@apply overflow-visible;
+	overflow: visible !important;
 }
 .title {
 	@apply text-sm font-semibold text-gray-900 lg:text-xl;
