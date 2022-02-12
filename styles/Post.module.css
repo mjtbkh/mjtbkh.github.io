@@ -31,3 +31,9 @@
 .the_article .social {
 	@apply flex flex-row gap-1;
 }
+.the_article .comments {
+	@apply p-4;
+}
+.the_article .comments h3 {
+	@apply my-4 text-lg font-bold;
+}

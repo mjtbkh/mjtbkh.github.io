@@ -8,8 +8,8 @@ import {
 	RefreshIcon,
 } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import SharingButton from '../components/elements/SharingButton';
+import Comments from '../components/Comments';
 
 const PostQuery = gql`
 	query Article($id: ID!) {
@@ -171,6 +171,15 @@ const FetchPost = ({ id }: PostDataProps) => {
 				<hr />
 				<section className={styles.body}>
 					<p>{attr.body}</p>
+				</section>
+				<hr />
+				<section className={styles.comments}>
+					<h3>Comments on &ldquo;{attr.title}&rdquo;</h3>
+					<Comments
+						id={id.toString()}
+						title={attr.title}
+						url={`http://mydomain/${router.asPath}`}
+					/>
 				</section>
 			</article>
 		);
