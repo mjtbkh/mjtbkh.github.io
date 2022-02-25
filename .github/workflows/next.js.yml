@@ -10,10 +10,6 @@ jobs:
     environment: 'github-pages'
 
     steps:
-    - name: Set env variables
-      env:
-        NEXT_PUBLIC_GITHUB_GRAPHQL_BEARER_TOKEN: ${{ env.NEXT_PUBLIC_GITHUB_GRAPHQL_BEARER_TOKEN }}
-        NEXT_PUBLIC_STRAPI_GRAPHQL_BEARER_TOKEN: ${{ env.NEXT_PUBLIC_STRAPI_GRAPHQL_BEARER_TOKEN }}
     - name: Checkout 🛎️
       uses: actions/checkout@v2
     - name: Use Node.js 16.x
