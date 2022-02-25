@@ -9,15 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout 🛎️
       uses: actions/checkout@v2
     - name: Use Node.js 16.x
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
+        cache: 'npm'
         
-    - name: Installing my packages
-      run: npm install
+    - name: Installing my packages 📦
+      run: npm ci
 
-    - name: Build my App
-      run: npm run build && npm run start && touch ./out/.nojekyll
+    - name: Build my App 🔨
+      run: npm run build && npm run export && touch ./out/.nojekyll
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out
