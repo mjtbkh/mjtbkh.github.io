@@ -2,8 +2,10 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['avatars.githubusercontent.com', 'localhost'],
+		domains: ['avatars.githubusercontent.com', 'mjtbkh.github.io'],
 		minimumCacheTTL: 2592000,
+		loader: 'imgix',
+		path: 'https://mjtbkh.imgix.net',
 	},
 };
 
