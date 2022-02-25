@@ -139,31 +139,31 @@ const FetchPost = ({ id }: PostDataProps) => {
 						<div className={styles.social}>
 							<SharingButton
 								name='twitter'
-								url={`https://twitter.com/intent/tweet/?text=${attr.title}&url=http://mydomain/${router.asPath}`}
+								url={`https://twitter.com/intent/tweet/?text=${attr.title}&url=http://mjtbkh.github.io/${router.asPath}`}
 							/>
 							<SharingButton
 								name='facebook'
-								url={`https://facebook.com/sharer/sharer.php?u=http://mydomain/${router.asPath}`}
+								url={`https://facebook.com/sharer/sharer.php?u=http://mjtbkh.github.io/${router.asPath}`}
 							/>
 							<SharingButton
 								name='reddit'
-								url={`https://reddit.com/submit/?url=http://mydomain/${router.asPath}`}
+								url={`https://reddit.com/submit/?url=http://mjtbkh.github.io/${router.asPath}`}
 							/>
 							<SharingButton
 								name='whatsapp'
-								url={`whatsapp://send?text=${attr.title} http://mydomain/${router.asPath}`}
+								url={`whatsapp://send?text=${attr.title} http://mjtbkh.github.io/${router.asPath}`}
 							/>
 							<SharingButton
 								name='hackernews'
-								url={`https://news.ycombinator.com/submitlink?u=http://mydomain/${router.asPath}&t=${attr.title}`}
+								url={`https://news.ycombinator.com/submitlink?u=http://mjtbkh.github.io/${router.asPath}&t=${attr.title}`}
 							/>
 							<SharingButton
 								name='telegram'
-								url={`https://telegram.me/share/url?text=${attr.title}&url=http://mydomain/${router.asPath}`}
+								url={`https://telegram.me/share/url?text=${attr.title}&url=http://mjtbkh.github.io/${router.asPath}`}
 							/>
 							<SharingButton
 								name='mail'
-								url={`mailto:?subject=${attr.title}&body=${attr.title} http://mydomain/${router.asPath}`}
+								url={`mailto:?subject=${attr.title}&body=${attr.title} http://mjtbkh.github.io/${router.asPath}`}
 							/>
 						</div>
 					</div>
@@ -178,7 +178,7 @@ const FetchPost = ({ id }: PostDataProps) => {
 					<Comments
 						id={id.toString()}
 						title={attr.title}
-						url={`http://mydomain/${router.asPath}`}
+						url={`http://mjtbkh.github.io/${router.asPath}`}
 					/>
 				</section>
 			</article>

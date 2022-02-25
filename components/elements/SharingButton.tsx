@@ -100,4 +100,3 @@ const SharingButton = ({ name, url }: SharingButtonProps) => {
 };
 
 export default SharingButton;
-//https://twitter.com/intent/tweet/?text=${attr.title}&url=http://mydomain/${router.asPath}
