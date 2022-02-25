@@ -21,13 +21,55 @@ const SkillsSection = () => {
 						understand and develop blockchain and web3 products!
 					</p>
 					<SkillChart />
+					<div className={styles.contributions}>
+						<h4>My activity in open-source communities:</h4>
+						<ul>
+							<ol>
+								{'>'} on{' '}
+								<a
+									href='https://ethereum.stackexchange.com/users/78843/mojtaba'
+									target='_blank'
+									rel='noreferrer'>
+									Ethereum stackexchange
+								</a>
+							</ol>
+							<ol>
+								{'>'} on{' '}
+								<a
+									href='https://ethereum-magicians.org/u/mjtbkh/summary'
+									target='_blank'
+									rel='noreferrer'>
+									Ethereum magicians
+								</a>
+							</ol>
+							<ol>
+								{'>'} on{' '}
+								<a
+									href='https://forum.openzeppelin.com/u/mjtbkh/summary'
+									target='_blank'
+									rel='noreferrer'>
+									OpenZeppelin forum
+								</a>
+							</ol>
+							<ol>
+								{'>'} on{' '}
+								<a
+									href='https://smartcontract.coiniran.com/u/mjtbkh/summary'
+									target='_blank'
+									rel='noreferrer'>
+									CoinIran forum
+								</a>{' '}
+								(in persian)
+							</ol>
+						</ul>
+					</div>
 				</div>
 				<section className={styles.timeline}>
-					<ol className='relative border-l border-gray-200 dark:border-gray-700'>
+					<ol className='relative border-l border-gray-200'>
 						<li className='mb-10 ml-6'>
-							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
+							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white'>
 								<svg
-									className='h-3 w-3 text-blue-600 dark:text-blue-400'
+									className='h-3 w-3 text-blue-600'
 									fill='currentColor'
 									viewBox='0 0 20 20'
 									xmlns='http://www.w3.org/2000/svg'>
@@ -37,16 +79,16 @@ const SkillsSection = () => {
 										clipRule='evenodd'></path>
 								</svg>
 							</span>
-							<h4 className='mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white'>
+							<h4 className='mb-1 flex items-center text-lg font-semibold text-gray-900'>
 								Blockchain & smart-contracts{' '}
-								<span className='mr-2 ml-3 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800 dark:bg-blue-200 dark:text-blue-800'>
+								<span className='mr-2 ml-3 rounded bg-blue-100 px-2.5 py-0.5 text-sm font-medium text-blue-800'>
 									Latest
 								</span>
 							</h4>
-							<time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+							<time className='mb-2 block text-sm font-normal leading-none text-gray-400'>
 								2021
 							</time>
-							<p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+							<p className='mb-4 text-base font-normal text-gray-500'>
 								Started learning about Blockchain tech and smart-contract
 								development with Solidity, truffle and hardhat on EVM-compatible
 								blockchains. Also working with Go & Rust to develop Blockchain
@@ -54,9 +96,9 @@ const SkillsSection = () => {
 							</p>
 						</li>
 						<li className='mb-10 ml-6'>
-							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
+							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white'>
 								<svg
-									className='h-3 w-3 text-blue-600 dark:text-blue-400'
+									className='h-3 w-3 text-blue-600'
 									fill='currentColor'
 									viewBox='0 0 20 20'
 									xmlns='http://www.w3.org/2000/svg'>
@@ -66,13 +108,13 @@ const SkillsSection = () => {
 										clipRule='evenodd'></path>
 								</svg>
 							</span>
-							<h4 className='mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white'>
+							<h4 className='mb-1 flex items-center text-lg font-semibold text-gray-900'>
 								Node.js & Express.js & React
 							</h4>
-							<time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+							<time className='mb-2 block text-sm font-normal leading-none text-gray-400'>
 								2020
 							</time>
-							<p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+							<p className='mb-4 text-base font-normal text-gray-500'>
 								Started frontend development with JavaScript (ES6) and React.js
 								since late 2020. Experienced in developing UIs using React,
 								GraphQL, Redux. Also familiar with Vue.js and backend
@@ -80,9 +122,9 @@ const SkillsSection = () => {
 							</p>
 						</li>
 						<li className='mb-10 ml-6'>
-							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
+							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white'>
 								<svg
-									className='h-3 w-3 text-blue-600 dark:text-blue-400'
+									className='h-3 w-3 text-blue-600'
 									fill='currentColor'
 									viewBox='0 0 20 20'
 									xmlns='http://www.w3.org/2000/svg'>
@@ -92,21 +134,21 @@ const SkillsSection = () => {
 										clipRule='evenodd'></path>
 								</svg>
 							</span>
-							<h4 className='mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+							<h4 className='mb-1 text-lg font-semibold text-gray-900'>
 								PHP, Laravel and WordPress
 							</h4>
-							<time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+							<time className='mb-2 block text-sm font-normal leading-none text-gray-400'>
 								2019
 							</time>
-							<p className='text-base font-normal text-gray-500 dark:text-gray-400'>
+							<p className='text-base font-normal text-gray-500'>
 								Started learning PHP languages and then backend development with
 								Laravel framework and WordPress theme & plugin development
 							</p>
 						</li>
 						<li className='mb-10 ml-6'>
-							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900'>
+							<span className='absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-200 ring-8 ring-white'>
 								<svg
-									className='h-3 w-3 text-blue-600 dark:text-blue-400'
+									className='h-3 w-3 text-blue-600'
 									fill='currentColor'
 									viewBox='0 0 20 20'
 									xmlns='http://www.w3.org/2000/svg'>
@@ -116,13 +158,13 @@ const SkillsSection = () => {
 										clipRule='evenodd'></path>
 								</svg>
 							</span>
-							<h4 className='mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
+							<h4 className='mb-1 text-lg font-semibold text-gray-900'>
 								C++ developer
 							</h4>
-							<time className='mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+							<time className='mb-2 block text-sm font-normal leading-none text-gray-400'>
 								since 2015
 							</time>
-							<p className='text-base font-normal text-gray-500 dark:text-gray-400'>
+							<p className='text-base font-normal text-gray-500'>
 								Started learning C++ on 2015 and have experience with C++ cli
 								apps and Qt Creator IDE and C++ Qt library v5/v6: QtWidgets, QML
 							</p>

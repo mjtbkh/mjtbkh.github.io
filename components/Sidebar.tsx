@@ -3,7 +3,6 @@ import {
 	HomeIcon,
 	PencilIcon,
 	ViewGridIcon,
-	IdentificationIcon,
 	PhoneIcon,
 } from '@heroicons/react/outline';
 import Image from 'next/image';
@@ -45,7 +44,7 @@ const Sidebar = () => {
 						</a>
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link href={`/`} passHref>
 						<a>
 							<ViewGridIcon
@@ -54,9 +53,9 @@ const Sidebar = () => {
 							Portfolio
 						</a>
 					</Link>
-				</li>
+				</li> */}
 				<li>
-					<Link href={`/`} passHref>
+					<Link href={`/contact`} passHref>
 						<a>
 							<PhoneIcon
 								className={`${styles.sidebar_icons} text-fuchsia-500`}

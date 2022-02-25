@@ -17,3 +17,15 @@
 .timeline ol li {
 	@apply rounded-2xl bg-white p-4 shadow-md;
 }
+.contributions {
+	@apply mt-4 p-2;
+}
+.contributions h4 {
+	@apply rounded-md bg-blue-700 px-4 py-2 font-mono text-white;
+}
+.contributions ul {
+	@apply p-4 leading-8 text-gray-800;
+}
+.contributions ul a {
+	@apply underline decoration-dotted duration-300 hover:text-green-700;
+}

@@ -29,7 +29,7 @@ const GithubQuery = gql`
 					}
 				}
 			}
-			repositories(last: 4) {
+			repositories(last: 4, privacy: PUBLIC) {
 				edges {
 					node {
 						id

@@ -13,7 +13,6 @@ const PostsQuery = gql`
 					createdAt
 					publishedAt
 					updatedAt
-					uuid
 					locale
 					isMediumPost
 					mediumLink
@@ -39,7 +38,6 @@ interface Post {
 		createdAt: string;
 		publishedAt: string;
 		updatedAt: string;
-		uuid: string;
 		locale: string;
 		isMediumPost: boolean;
 		mediumLink: string;
@@ -56,7 +54,6 @@ const FetchAllPosts = () => {
 			createdAt: '',
 			publishedAt: '',
 			updatedAt: '',
-			uuid: '',
 			locale: 'en',
 			isMediumPost: false,
 			mediumLink: 'https://medium.com/@mjtbkh/',
