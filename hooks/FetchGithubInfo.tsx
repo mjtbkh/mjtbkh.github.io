@@ -57,7 +57,7 @@ export const GithubApolloClient = new ApolloClient({
 	uri: 'https://api.github.com/graphql',
 	cache: new InMemoryCache(),
 	headers: {
-		Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_GRAPHQL_BEARER_TOKEN}`,
+		Authorization: `Bearer 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`,
 	},
 });
 
