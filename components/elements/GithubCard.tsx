@@ -17,35 +17,39 @@ interface GithubCardProps {
 		};
 		bio: string;
 		repositoriesContributedTo: {
-			edges: [
-				node: {
-					id: string;
-					name: string;
-					url: string;
-					description: string;
-				},
-			];
+			edges: Array<ContrNode>;
 		};
 		repositories: {
-			edges: [
-				node: {
-					id: string;
-					name: string;
-					url: string;
-					description: string;
-				},
-			];
+			edges: Array<RepNode>;
 		};
 		organizations: {
-			edges: [
-				node: {
-					id: string;
-					name: string;
-					url: string;
-					avatarUrl: string;
-				},
-			];
+			edges: Array<OrgNode>;
 		};
+	};
+}
+interface OrgNode {
+	node: {
+		id: string;
+		name: string;
+		url: string;
+		avatarUrl: string;
+	};
+}
+interface RepNode {
+	node: {
+		id: string;
+		name: string;
+		url: string;
+		description: string;
+	};
+}
+
+interface ContrNode {
+	node: {
+		id: string;
+		name: string;
+		url: string;
+		description: string;
 	};
 }
 
