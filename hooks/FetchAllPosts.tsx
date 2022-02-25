@@ -23,7 +23,7 @@ const PostsQuery = gql`
 `;
 
 export const PostsApolloClient = new ApolloClient({
-	uri: 'http://localhost:1337/graphql',
+	uri: 'https://mjtbkh-strapi-app.herokuapp.com/graphql',
 	cache: new InMemoryCache(),
 	headers: {
 		Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_GRAPHQL_BEARER_TOKEN}`,
