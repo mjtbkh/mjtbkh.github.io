@@ -2,6 +2,7 @@ import { ApolloClient, InMemoryCache, useQuery, gql } from '@apollo/client';
 import { Fragment, useState } from 'react';
 import GithubCard from '../components/elements/GithubCard';
 import Shimmer from '../components/elements/Shimmer';
+import { caesarCipher, FetchGithubToken } from './FetchTokens';
 
 const GithubQuery = gql`
 	query User($login: String!) {
@@ -57,7 +58,7 @@ export const GithubApolloClient = new ApolloClient({
 	uri: 'https://api.github.com/graphql',
 	cache: new InMemoryCache(),
 	headers: {
-		Authorization: `Bearer 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`,
+		Authorization: `Bearer ${caesarCipher(FetchGithubToken(), -3)}`,
 	},
 });
 

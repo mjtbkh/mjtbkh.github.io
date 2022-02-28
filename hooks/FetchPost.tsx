@@ -10,6 +10,7 @@ import {
 import { useRouter } from 'next/router';
 import SharingButton from '../components/elements/SharingButton';
 import Comments from '../components/Comments';
+import { caesarCipher, FetchStrapiToken } from './FetchTokens';
 
 const PostQuery = gql`
 	query Article($id: ID!) {
@@ -42,7 +43,7 @@ export const PostApolloClient = new ApolloClient({
 	uri: 'https://mjtbkh-strapi-app.herokuapp.com/graphql',
 	cache: new InMemoryCache(),
 	headers: {
-		Authorization: `Bearer bdb454451667e21730cc03963cd0d19f913628964c3fe7d92becc42bd680d66eebea64636db7d7a1a0a90717ea66f0c59e868aebf2f44dc88b85808c5fce004ac5e720017a368337853e705415f35d416f8e88d1840433baf5ec981864e73aed71011f397240a3daccd4e640a443b2a85f3f7916461242439e2643717023348d`,
+		Authorization: `Bearer ${caesarCipher(FetchStrapiToken(), -5)}`,
 	},
 });
 
@@ -65,7 +66,6 @@ interface PostsDataAttributes {
 	};
 	publishedAt: string;
 	updatedAt: string;
-	locale: string;
 	isMediumPost: boolean;
 	mediumLink: string;
 }
