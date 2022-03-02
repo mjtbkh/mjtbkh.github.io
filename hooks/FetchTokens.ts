@@ -1,7 +1,7 @@
 export const FetchGithubToken = (): string =>
 	'jks_mec3Y68DeiMBBBJm6zt7CijF21AgnM4XhPPk'; // 3-shifted
 export const FetchStrapiToken = (): string =>
-	'k9k5k6464k923g4k093833535fg8j8518i3i46k0j8h582g7h0g5g62h8959f3j3j80201547g65i1h82kj63619if50kk1g179jj7j50k6hkfhj08k943h2352606970i5551557g5769823kk1g7hh708fk3568kg1gf0704049k36i794j6h12h42hffh0125fi5k52gh8452jf9f76j53i7h20ig05211296335725467057hk182if3h2k1'; // 5-shifted
+	'17g40j02ji6gh7311k1059k1141332ff9318kjh3g37g5jj98016452j01j91143hj5k923kgg987igh16jgh033940ih567k2131i295j44g4647g01fi6g77j509h0k2g6k49017k03482k7h942k359hkjjj6f99473h2k08220jg3817j5h10h60h7f054h702814hi033jjh8jj9fggk16hi9857i1ijikii5kh997ffh2j6i3190gghi20'; // 5-shifted
 
 export const caesarCipher = (s: string, k: number): string => {
 	var n = 26; // alphabet letters amount
