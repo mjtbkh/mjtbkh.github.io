@@ -4,6 +4,8 @@ const nextConfig = {
 	images: {
 		domains: ['avatars.githubusercontent.com', 'localhost'],
 		minimumCacheTTL: 2592000,
+		loader: 'imgix',
+		path: 'https://mjtbkh.imgix.net',
 	},
 };
 
