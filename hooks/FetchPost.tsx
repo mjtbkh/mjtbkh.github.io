@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import SharingButton from '../components/elements/SharingButton';
 import Comments from '../components/Comments';
 import { caesarCipher, FetchStrapiToken } from './FetchTokens';
+import { Loader } from '../components/Loader';
 
 const PostQuery = gql`
 	query Article($id: ID!) {
@@ -99,7 +100,7 @@ const FetchPost = ({ id }: PostDataProps) => {
 				<section className={styles.meta}>
 					<div className={styles.thumbnail}>
 						<Image
-							src={`http://localhost:1337${attr.post_media.data[0].attributes.url}`}
+							src={`http://mjtbkh-strapi-app.herokuapp.com${attr.post_media.data[0].attributes.url}`}
 							alt={attr.post_media.data[0].attributes.name}
 							layout='intrinsic'
 							width={280}

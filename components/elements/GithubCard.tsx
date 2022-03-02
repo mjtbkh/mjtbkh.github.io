@@ -5,6 +5,7 @@ import {
 	ExternalLinkIcon,
 	FireIcon,
 } from '@heroicons/react/outline';
+import { Loader } from '../Loader';
 
 interface GithubCardProps {
 	user: {
@@ -78,6 +79,7 @@ const GithubCard = (props: GithubCardProps) => {
 			<section className={styles.info}>
 				<section className={styles.individual}>
 					<Image
+						loader={Loader}
 						src={props.user.avatarUrl}
 						width={128}
 						height={128}
@@ -110,6 +112,7 @@ const GithubCard = (props: GithubCardProps) => {
 								target='_blank'
 								rel='nofollow noreferrer'>
 								<Image
+									loader={Loader}
 									src={org.node?.avatarUrl}
 									width={36}
 									height={36}
